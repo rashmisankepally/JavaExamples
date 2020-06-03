@@ -10,13 +10,11 @@ public class TaxCalculator {
     }
 
     static double calculateTax(double userIncome){
-        double uIncome= userIncome;
         double federalExemption= 11327.0;
         double provincialExemption= 9863.0;
-        double federalTax =  (uIncome- federalExemption) * 0.15;
-        double provincialTax= (uIncome - provincialExemption) * 0.0505;
-        double totalTax= federalTax + provincialTax;
-        return totalTax;
+        double federalTax =  (userIncome - federalExemption) * 0.15;
+        double provincialTax= (userIncome - provincialExemption) * 0.0505;
+        return federalTax + provincialTax;
 
     }
 }
