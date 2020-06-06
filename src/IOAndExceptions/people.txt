@@ -1,3 +1,10 @@
 James,kalCollege Park,40000
+Jim,Boyds,100000
+Jack,Hyattsville, 50000
+Rashmi,Florida,30000
+Prashanth,India,110000
+Ratnesh,Hyattsville,600000
+Vipin,Michigan,200000
+Revati,College Park,10000
 Krishna,Potomac,1000000
 Bhim,Hastinaput,100000

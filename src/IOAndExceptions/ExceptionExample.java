@@ -37,18 +37,26 @@ public class ExceptionExample {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        FileWriter fw  = new FileWriter("PeopleTax.txt");
+        FileWriter fw  = new FileWriter("/Users/rashmisankepally/Desktop/career_planning/career_prep/JavaExamples/src/IOAndExceptions/peopleTax.txt");
 
         BufferedReader br = new BufferedReader(fr);
         BufferedWriter bw = new BufferedWriter(fw);
-        bw.write("File contains calculated tax of people");
+        bw.write("File contains calculated tax of people"+"\n");
 
         try {
-            String[] line = br.readLine().split("\t");
-            while(line.length!=0) {
-                line = br.readLine().split(",");
-                double tax =  calculateTax(Double.parseDouble(line[2]));
-                bw.write(line[0]+" "+line[1]+" "+tax);
+            String read_line = br.readLine();
+            String[] line = read_line.split(",");
+            double tax =  calculateTax(Double.parseDouble(line[2]));
+            bw.write(line[0]+" "+line[1]+" "+tax+"\n");
+            System.out.println(line[0]+" "+line[1]+" "+tax);
+            while(read_line!=null) {
+                read_line = br.readLine();
+                if (read_line==null) {break;}
+                line = read_line.split(",");
+                tax =  calculateTax(Double.parseDouble(line[2]));
+                System.out.println(line[0]+" "+line[1]+" "+tax);
+                bw.write(line[0]+" "+line[1]+" "+tax+"\n");
+
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -56,7 +64,7 @@ public class ExceptionExample {
             e.printStackTrace();
         }
 
-
+        bw.close();
     }
 
     private static int arithmeticException(int i, int j){
