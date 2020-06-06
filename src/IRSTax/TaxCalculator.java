@@ -1,3 +1,5 @@
+package IRSTax;
+
 import java.util.Scanner;
 /*
  Create a program to calculate federal and state tax based on income. Follow IRS rules
@@ -28,7 +30,7 @@ public class TaxCalculator {
         System.out.println("Your total tax is: "+tax);
     }
 
-    static double calculateTax(double userIncome){
+    public static double calculateTax(double userIncome){
         double federalExemption= 11327.0;
         double provincialExemption= 9863.0;
         double federalTax =  (userIncome - federalExemption) * 0.15;

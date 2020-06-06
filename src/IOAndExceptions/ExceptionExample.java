@@ -12,5 +12,61 @@ Do this with at least 6 classes, FileInputStream/FileOutputStream, FileReader/Fi
 BufferedReader/BufferedWriter
  */
 
+import java.io.*;
+
+import IRSTax.TaxCalculator;
+
+import static IRSTax.TaxCalculator.calculateTax;
+
 public class ExceptionExample {
+    public static void main(String[] args) throws Exception{
+        String k = null;
+        try {
+            nullPointerException(k.charAt(1));
+            arithmeticException(10, 0);
+        }catch(Exception e){
+            System.out.println("Exception"+ e +"has occurred");
+        }finally{
+            System.out.println("Now the exception is perfectly handled");
+        }
+
+        TaxCalculator tc = new TaxCalculator();
+        FileReader fr = null;
+        try {
+            fr = new FileReader("/Users/rashmisankepally/Desktop/career_planning/career_prep/JavaExamples/src/IOAndExceptions/people.txt");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        FileWriter fw  = new FileWriter("PeopleTax.txt");
+
+        BufferedReader br = new BufferedReader(fr);
+        BufferedWriter bw = new BufferedWriter(fw);
+        bw.write("File contains calculated tax of people");
+
+        try {
+            String[] line = br.readLine().split("\t");
+            while(line.length!=0) {
+                line = br.readLine().split(",");
+                double tax =  calculateTax(Double.parseDouble(line[2]));
+                bw.write(line[0]+" "+line[1]+" "+tax);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+    private static int arithmeticException(int i, int j){
+        return i/j;
+    }
+
+    private static void nullPointerException(char k){
+        System.out.println(k);
+    }
+
+
+
 }

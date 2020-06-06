@@ -1,0 +1,3 @@
+James,kalCollege Park,40000
+Krishna,Potomac,1000000
+Bhim,Hastinaput,100000
