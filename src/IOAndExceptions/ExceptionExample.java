@@ -65,6 +65,14 @@ public class ExceptionExample {
         }
 
         bw.close();
+
+        FileInputStream fis = null;
+        try {
+            fis = new FileInputStream("/Users/rashmisankepally/Desktop/career_planning/career_prep/JavaExamples/src/IOAndExceptions/people.txt");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        System.out.println(fis.read());
     }
 
     private static int arithmeticException(int i, int j){
