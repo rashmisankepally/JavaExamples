@@ -1,11 +1,11 @@
 File contains calculated tax of people
-James kalCollege Park 5822.8685
-Jim Boyds 17852.8685
-Jack Hyattsville 7827.8685000000005
-Rashmi Florida 3817.8685
-Prashanth India 19857.8685
-Ratnesh Hyattsville 118102.8685
-Vipin Michigan 37902.8685
+James kalCollege Park 8403.4385
+Jim Boyds 32927.2785
+Jack Hyattsville 11308.4385
+Rashmi Florida 5498.438499999999
+Prashanth India 36632.2785
+Ratnesh Hyattsville 247610.9285
+Vipin Michigan 79410.9285
 Revati College Park -192.1315
-Krishna Potomac 198302.86849999998
-Bhim Hastinaput 17852.8685
+Krishna Potomac 415810.92850000004
+Bhim Hastinaput 32927.2785

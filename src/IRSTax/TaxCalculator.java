@@ -8,17 +8,6 @@ import java.util.Scanner;
 
 Use separate classes for separation of concern
 
-Create abstract classes with some concrete and abstract methods
-
-Create multiple subclasses
-
-Create interfaces and implement them
-
-Create service as well as domain entities
-
-Create all types of nested inner classes and with right examples
-
-Create Wrapper classes for int, float and boolean, try to do autoboxing
  */
 
 public class TaxCalculator {
@@ -33,8 +22,17 @@ public class TaxCalculator {
     public static double calculateTax(double userIncome){
         double federalExemption= 11327.0;
         double provincialExemption= 9863.0;
-        double federalTax =  (userIncome - federalExemption) * 0.15;
+        double federalTax = 0.0;
+        double ExemptIncome =  (userIncome - federalExemption);
+
+
+        if (userIncome < 30000) {federalTax = ExemptIncome*0.15;}
+        else if (userIncome < 80000 ) {federalTax = ExemptIncome*0.24;}
+        else if (userIncome < 200000 ) {federalTax = ExemptIncome*0.32;}
+        else if (userIncome > 80000 ) {federalTax = ExemptIncome*0.37;}
+
         double provincialTax= (userIncome - provincialExemption) * 0.0505;
+
         return federalTax + provincialTax;
 
     }

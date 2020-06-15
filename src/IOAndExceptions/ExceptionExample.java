@@ -68,7 +68,7 @@ public class ExceptionExample {
 
         FileInputStream fis = null;
         try {
-            fis = new FileInputStream("/Users/rashmisankepally/Desktop/career_planning/career_prep/JavaExamples/src/IOAndExceptions/people.txt");
+            fis = new FileInputStream(new File("/Users/rashmisankepally/Desktop/career_planning/career_prep/JavaExamples/src/IOAndExceptions/people.txt"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
