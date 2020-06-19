@@ -5,6 +5,18 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /*
+Crate following Employee, Address and Department tables in HSQL
+
+One department can have many employees, one employee can have many addresses, multiple employees can live in one address (many to many)
+
+Write a program to add, update, delete on these tables
+
+Write a program to read all the data and print a pretty report in the hierarchy of department, employee and address
+
+Read, only the employees which belong to department id ex 21 and live at address with zip code 20171
+ */
+
+/*
 CREATE TABLE Employee(
 ID varchar(100),
 Name varchar(1000),
