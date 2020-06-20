@@ -19,12 +19,6 @@ public class CollectionExample {
         numbers.indexOf(2);
         System.out.println(numbers);
 
-
-
     }
-
-
-
-
 
 }
