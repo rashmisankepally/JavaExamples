@@ -11,7 +11,18 @@ Write a program that expects any Collection and sums up all the values in the co
 it is number or concat all Strings if it is a string.
  */
 
-public class Container {
+import CarInventoryApplication.Car;
+
+public class Container <T extends Car>{
+    T objects;
+
+    public void addStuff(T t){
+        objects = t;
+    }
+
+    public T returnStuff(){
+        return objects;
+    }
 
 }
 

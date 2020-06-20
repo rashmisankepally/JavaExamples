@@ -1,4 +1,4 @@
-package CarRacing;
+package CarRacingThreads;
  /*
  Create a car racing game where the following things are happening simultaneously,
  does not have to be a real game, just printing these details may be fine
