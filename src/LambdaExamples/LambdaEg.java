@@ -21,6 +21,17 @@ Write Date and Time using new java 8 APIs, create a from date, to date, and time
  */
 
 public class LambdaEg {
+    public static void main(String[] args){
+        StatisticalOperation sum = (a, b, c) -> a+b+c;
+        StatisticalOperation average = (a, b, c) -> (a+b+c)/3;
+
+        System.out.println(sum.operate(1,2,3));
+        System.out.println(average.operate(1,2,3));
+
+        HelloMessage hm = (s) -> s.length();
+        System.out.println(hm.strLength("abc"));
+
+    }
 }
 
 @FunctionalInterface
@@ -30,7 +41,7 @@ interface StatisticalOperation {
 
 @FunctionalInterface
 interface HelloMessage{
-    public double message(String name);
+    public double strLength(String name);
 }
 
 

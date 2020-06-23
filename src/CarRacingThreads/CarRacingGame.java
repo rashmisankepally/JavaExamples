@@ -12,11 +12,16 @@ Everybody's position is updated
 Try different thread operations like join, interrupt, priority and others
   */
 
-public class CarRacingGame {
-    int position = 0;
-    PlayerCar car1 = new PlayerCar("c1", 1);
-    PlayerCar car2 = new PlayerCar("c2", 2);
-
+public class CarRacingGame{
+    public static void main(String [] args) throws InterruptedException {
+        int position = 0;
+        Thread car1 = new PlayerCar("c1", 1);
+        Thread car2 = new PlayerCar("c2", 2);
+        car1.start();
+        car2.start();
+        car1.run();
+        car1.join();
+    }
 
 }
 
@@ -40,8 +45,8 @@ class PlayerCar extends Thread{
             }
 
         }
-        position.notifyAll();
         position = (int)position + 1;
+        position.notifyAll();
 
         }
     }
